@@ -1,0 +1,61 @@
+{{ form.non_field_errors }}
+
+<form action="{% url 'users:user_form' %}" method="post">
+  {% csrf_token %}
+
+  <div class="fieldWrapper">
+    {{ form.first_name.errors }}
+    <label>First Name:</label>
+    {{ form.first_name }}
+  </div>
+
+  <div class="fieldWrapper">
+    {{ form.last_name.errors }}
+    <label for="id_message">Last Name:</label>
+    {{ form.last_name }}
+  </div>
+
+  <div class="fieldWrapper">
+    {{ form.email.errors }}
+    <label>Email:</label>
+    {{ form.email }}
+  </div>
+
+  <div class="fieldWrapper">
+    {{ form.birth_year.errors }}
+    <label>Birth Year:</label>
+    {{ form.birth_year }}
+  </div>
+
+  <div class="fieldWrapper">
+    {{ form.country.errors }}
+    <label>Country:</label>
+    {{ form.country }}
+  </div>
+
+  <div class="fieldWrapper">
+    {{ form.city.errors }}
+    <label>City:</label>
+    {{ form.city }}
+  </div>
+
+  <div class="fieldWrapper">
+    {{ form.address1.errors }}
+    <label>Address 1:</label>
+    {{ form.address1 }}
+  </div>
+
+  <div class="fieldWrapper">
+    {{ form.address2.errors }}
+    <label>Address 2:</label>
+    {{ form.address2 }}
+  </div>
+
+  <div class="fieldWrapper">
+    {{ form.address3.errors }}
+    <label>Address 3:</label>
+    {{ form.address3 }}
+  </div>
+
+  <input type='submit' value='Submit' />
+</form>
